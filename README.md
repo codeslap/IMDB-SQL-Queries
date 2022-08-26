@@ -26,6 +26,6 @@ In 13.sql, write a SQL query to list the names of all people who starred in a mo
 
 Schema:
 
-    ![schema](https://user-images.githubusercontent.com/56369460/186871902-f36903ca-dc0a-4539-aadd-e55e7f0ab460.jpg)
+![schema](https://user-images.githubusercontent.com/56369460/186871902-f36903ca-dc0a-4539-aadd-e55e7f0ab460.jpg)
 
 Project is from Harvard's CS50x course, week 7.
