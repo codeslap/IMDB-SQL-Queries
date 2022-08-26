@@ -25,35 +25,65 @@ In 12.sql, write a SQL query to list the titles of all movies in which both John
 In 13.sql, write a SQL query to list the names of all people who starred in a movie in which Kevin Bacon also starred.
 
 Schema:
+
 CREATE TABLE movies (
+
                 id INTEGER,
+		
                 title TEXT NOT NULL,
+		
                 year NUMERIC,
+		
                 PRIMARY KEY(id)
+		
                 );
+		
 CREATE TABLE stars (
+
                 movie_id INTEGER NOT NULL,
+		
                 person_id INTEGER NOT NULL,
+		
                 FOREIGN KEY(movie_id) REFERENCES movies(id),
+		
                 FOREIGN KEY(person_id) REFERENCES people(id)
+		
                 );
+		
 CREATE TABLE directors (
+
                 movie_id INTEGER NOT NULL,
+		
                 person_id INTEGER NOT NULL,
+		
                 FOREIGN KEY(movie_id) REFERENCES movies(id),
+		
                 FOREIGN KEY(person_id) REFERENCES people(id)
+		
                 );
+		
 CREATE TABLE ratings (
+
                 movie_id INTEGER NOT NULL,
+		
                 rating REAL NOT NULL,
+		
                 votes INTEGER NOT NULL,
+		
                 FOREIGN KEY(movie_id) REFERENCES movies(id)
+		
                 );
+		
 CREATE TABLE people (
+
                 id INTEGER,
+		
                 name TEXT NOT NULL,
+		
                 birth NUMERIC,
+		
                 PRIMARY KEY(id)
+		
 		            );
     
 Project is from Harvard's CS50x course, week 7.
